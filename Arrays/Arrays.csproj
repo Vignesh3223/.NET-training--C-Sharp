@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Arrays.Out_Parameter</StartupObject>
+    <StartupObject>Arrays.Params</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

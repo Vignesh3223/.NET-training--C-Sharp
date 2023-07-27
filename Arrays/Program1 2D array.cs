@@ -72,7 +72,6 @@ namespace Arrays
             foreach (int row in oneDimRowArray)
             {
                 Console.Write(row + " ");
-                Console.Write("\n");
             }
             Console.ReadLine();
         }
