@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Generics.Program1c</StartupObject>
+    <StartupObject>Generics.Program1a</StartupObject>
   </PropertyGroup>
   <PropertyGroup />
   <ItemGroup>
