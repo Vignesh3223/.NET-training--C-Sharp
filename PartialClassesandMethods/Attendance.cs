@@ -23,7 +23,7 @@ namespace PartialClassesandMethods
         }
         public void DisplayAttendance()
         {
-            Console.WriteLine($"{Id}\t{Name}\t{Attendance}");
+            Console.WriteLine($"{Id}\t{Name}\t\t{Attendance}");
         }
     }
     internal class Attendance
@@ -48,9 +48,8 @@ namespace PartialClassesandMethods
                 }
             }
             Console.WriteLine("\nTrainee Attendance");
-            Console.WriteLine("-------------------------");
+            Console.WriteLine("-----------------------------------");
             Console.WriteLine("Id\tName\t\tAttendance");
-
             foreach (var trainee in trainees)
             {
                 trainee.DisplayAttendance();
