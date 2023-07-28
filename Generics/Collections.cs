@@ -8,21 +8,15 @@ namespace Generics
         public static void ArrayList()
         {
             ArrayList array = new ArrayList();
-            array.Add("Vignesh");
             array.Add(null);
             array.Add(20);
             array.Add(null);
+            array.Add("DOTNET");
             Console.WriteLine("Printing ArrayList \n");
             foreach (var a in array)
             {
-                if (a == null)
-                {
-                    Console.WriteLine("I have a value");
-                }
-                else
-                {
-                    Console.WriteLine(a);
-                }
+                var c = a ?? "I have a value";
+                    Console.WriteLine(c);
             }
         }
         static void Main(string[] args)
