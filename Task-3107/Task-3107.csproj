@@ -50,6 +50,7 @@
     <Compile Include="Directives.cs" />
     <Compile Include="Enumeration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SealedClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

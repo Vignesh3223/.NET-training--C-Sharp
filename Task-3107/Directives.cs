@@ -1,5 +1,5 @@
-﻿//#define BubbleSort
-#define QuickSort
+﻿#define BubbleSort
+#undef QuickSort
 #define MergeSort
 using System;
 using System.Collections;
@@ -72,12 +72,12 @@ namespace Task_3107
 #pragma warning disable
 #warning MergeSort is undefined
 #pragma warning restore
-#warning MergeSort is undefined
+#warning MergeSort is undefined at Directives.cs
 //#error MergeSort is undefined
         static void Main(string[] args)
         {
 //#line 35 "Directives.cs"
-//          string a = 50;
+ //        string a = 50;
             #region
             Console.WriteLine("Enter The Size of array : ");
             int size = Convert.ToInt32(Console.ReadLine());

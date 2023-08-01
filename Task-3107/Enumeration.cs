@@ -1,6 +1,9 @@
-﻿using System;
+﻿#define Parameter
+#undef Iteration
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using static Task_3107.Enumeration;
@@ -14,10 +17,11 @@ namespace Task_3107
             circle, rectangle, square
         }
         //passing enum as parameter
+#if (Parameter)
         public void CalculateArea(int a, int b, Shapes shapes)
         {
             double area;
-            if (shapes==Shapes.circle)
+            if (shapes == Shapes.circle)
             {
                 area = 3.14 * a * a;
                 Console.WriteLine("Area of Circle : " + area);
@@ -33,7 +37,9 @@ namespace Task_3107
                 Console.WriteLine("Area of Square : " + area);
             }
         }
-        //Iteration
+#endif
+//Iteration
+#if (Iteration)
         public void Iterate(int num1,int num2)
         {
             Console.WriteLine("\n Area of Shapes");
@@ -56,37 +62,53 @@ namespace Task_3107
                 }
             }
         }
-            static void Main(string[] args)
+#endif
+        static void Main(string[] args)
         {
+            int ch;
             Enumeration enumeration = new Enumeration();
-            Console.WriteLine("Enter the Choice \n1.circle \n2.rectangle \n3.square");
-            int ch = int.Parse(Console.ReadLine());
-
-            switch (ch)
+#if (Parameter)
+            do
             {
-                case 1:
-                    Console.Write("Enter the radius : ");
-                    int radius = int.Parse(Console.ReadLine());
-                    enumeration.CalculateArea(radius, 0, Shapes.circle);
-                    break;
-                case 2:
-                    Console.Write("Enter the length : ");
-                    int length = int.Parse(Console.ReadLine());
-                    Console.Write("Enter the breadth : ");
-                    int breadth = int.Parse(Console.ReadLine());
-                    enumeration.CalculateArea(length, breadth, Shapes.rectangle);
-                    break;
-                case 3:
-                    Console.Write("Enter the side : ");
-                    int side = int.Parse(Console.ReadLine());
-                    enumeration.CalculateArea(side, 0, Shapes.square);
-                    break;
-                default:
-                    Console.WriteLine("Invalid shape");
-                    break;
-            }
-
-            //enumeration.Iterate(5, 8);
+                Console.WriteLine("Enter the Choice \n1.circle \n2.rectangle \n3.square");
+                ch = int.Parse(Console.ReadLine());
+                switch (ch)
+                {
+                    case 1:
+                        {
+                            Console.Write("Enter the radius : ");
+                            int radius = int.Parse(Console.ReadLine());
+                            enumeration.CalculateArea(radius, 0, Shapes.circle);
+                            break;
+                        }
+                    case 2:
+                        {
+                            Console.Write("Enter the length : ");
+                            int length = int.Parse(Console.ReadLine());
+                            Console.Write("Enter the breadth : ");
+                            int breadth = int.Parse(Console.ReadLine());
+                            enumeration.CalculateArea(length, breadth, Shapes.rectangle);
+                            break;
+                        }
+                    case 3:
+                        {
+                            Console.Write("Enter the side : ");
+                            int side = int.Parse(Console.ReadLine());
+                            enumeration.CalculateArea(side, 0, Shapes.square);
+                            break;
+                        }
+                    default:
+                        {
+                            Console.WriteLine("Invalid shape");
+                            break;
+                        }
+                }
+            } while(ch!= 3);
+#elif (Iteration)
+            enumeration.Iterate(6,12);
+#else
+            Console.WriteLine("No Method");
+#endif
             Console.ReadLine();
         }
     }
