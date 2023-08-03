@@ -13,20 +13,25 @@ namespace Task_0108
         public string EName { get; set; }
         public float ESalary { get; set; }
 
-        public string Details() => $"Employee {EName} with id {EId} earns an amount of Rs.{ESalary}";
+        //public string Details() => $"Employee {EName} with id {EId} earns an amount of Rs.{ESalary}";
+        public virtual void Details()
+        {
+            Console.WriteLine($"Employee {EName} with id {EId} earns an amount of Rs.{ESalary}");
+        }
     }
 
     class HR : Employee
     {
         public float bonus;
 
-        public new int Details()
+        public override void Details()
         {
-            if(ESalary >= 50000)
+            if (ESalary >= 50000)
             {
                 bonus = (ESalary * 25) / 100;
             }
-            else if(ESalary > 25000 && ESalary < 50000){
+            else if (ESalary > 25000 && ESalary < 50000)
+            {
                 bonus = (ESalary * 15) / 100;
             }
             else
@@ -34,8 +39,24 @@ namespace Task_0108
                 bonus = (ESalary * 10) / 100;
             }
             Console.WriteLine($"Bonus Amount : {bonus}");
-            return 0;
         }
+        //public new int Details()
+        //{
+        //    if (ESalary >= 50000)
+        //    {
+        //        bonus = (ESalary * 25) / 100;
+        //    }
+        //    else if (ESalary > 25000 && ESalary < 50000)
+        //    {
+        //        bonus = (ESalary * 15) / 100;
+        //    }
+        //    else
+        //    {
+        //        bonus = (ESalary * 10) / 100;
+        //    }
+        //    Console.WriteLine($"Bonus Amount : {bonus}");
+        //    return 0;
+        //}
     }
     internal class VirtualMethods
     {
@@ -57,7 +78,7 @@ namespace Task_0108
                 ESalary = Salary
             };
             Employee emp1 = employee;
-            Console.WriteLine(emp1.Details());
+            emp1.Details();
             employee.Details();
             Console.ReadLine();
         }
