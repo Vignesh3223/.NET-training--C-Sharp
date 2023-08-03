@@ -34,7 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Task___0208.CustomException</StartupObject>
+    <StartupObject>Task___0208.Pointers</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -109,25 +109,25 @@ namespace Task___0208
                     matrix2[i, j] = Convert.ToInt32(Console.ReadLine());
                 }
             }
-            Console.WriteLine("Matrix1 elements");
+            Console.WriteLine("\nMatrix1 elements");
+            Console.WriteLine("--------------");
             fixed (int* ptr = matrix1)
             {
                 for (int i = 0; i < matrix1.Length; i++)
                 {
-                    Console.Write($"{*(ptr + i)}");
-                    Console.Write("\t");
+                    Console.Write($"{*(ptr + i)}\t");
                 }
-                Console.Write("");
+                Console.WriteLine("\n");
             }
-            Console.WriteLine("Matrix2 elements");
+            Console.WriteLine("\nMatrix2 elements");
+            Console.WriteLine("--------------");
             fixed (int* ptr2 = matrix2)
             {
                 for (int i = 0; i < matrix2.Length; i++)
                 {
-                    Console.Write($"{*(ptr2 + i)}");
-                    Console.Write("\t");
+                    Console.Write($"{*(ptr2 + i)}\t");
                 }
-                Console.Write("");
+                Console.WriteLine("\n");
             }
             for (int i = 0; i < Rows; i++)
             {
@@ -136,16 +136,17 @@ namespace Task___0208
                     result[i, j] = matrix1[i, j] + matrix2[i, j];
                 }
             }
-            Console.WriteLine("Resultant Matrix:");
+            Console.WriteLine("\nResultant Matrix:");
+            Console.WriteLine("--------------");
             fixed (int* sum = result)
             {
                 for (int i = 0; i < result.Length; i++)
                 {
-                    Console.Write($"{*(sum + i)}");
-                    Console.Write("\t");
+                    Console.Write($"{*(sum + i)}\t");
                 }
-                Console.Write("");
+                Console.WriteLine("\n");
             }
+            Console.WriteLine("************************\n");
         }
 
         static void Main(string[] args)
