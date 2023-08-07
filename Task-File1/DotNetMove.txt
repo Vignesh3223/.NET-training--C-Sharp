@@ -1,0 +1,6 @@
+
+Trainee Arun's id is 101 and trainee is from Gudalur
+Trainee Siva's id is 105 and trainee is from Kanyakumari
+Trainee Vignesh's id is 108 and trainee is from Coimabtore
+Appended - Trainee Harshan's id is 104 and trainee is from Coimabtore
+Appended - Trainee Karthikeyan's id is 106 and trainee is from Tirupur
