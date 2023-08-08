@@ -10,7 +10,8 @@ using CsvHelper.Configuration;
 using System.Dynamic;
 
 namespace Task_File1
-{ 
+{
+    
         public class Employee
         {
             public int EmpID { get; set; }
@@ -20,7 +21,7 @@ namespace Task_File1
             public double bonus { get; set; }
             public static void WriteDetails(List<Employee> employee)
             {
-                string file = @"E:\Naveen\Task-Files\EmpReport.csv";
+                string file = @"E:\Naveen\Task-File1\EmpReport.csv";
                 string Seperator = ",";
                 StringBuilder output = new StringBuilder();
                 string[] heading = new string[] { "Employee ID", "Employee Name", "Designation", "Salary", "Bonus" };
@@ -71,15 +72,15 @@ namespace Task_File1
                     employee.Add(new Employee() { EmpID = empID, EmpName = empName, Designation = designation, Salary = salary });
                 }
                 WriteDetails(employee);
-                string readfile = File.ReadAllText(@"E:\Naveen\Task-Files\EmpReport.csv");
+                string readfile = File.ReadAllText(@"E:\Naveen\Task-File1\EmpReport.csv");
                 Console.WriteLine(readfile);
-                var reader = new StringReader(readfile);
-                var csv = new CsvReader(reader, CultureInfo.InvariantCulture);
-                var records = csv.GetRecords<dynamic>();
-                foreach (var rec in records)
-                {
-                    Console.WriteLine($"{rec.EmpID,-5}{rec.EmpName,-10}{rec.Designation,-10}{rec.Salary,-5}{rec.bonus,-5}");
-                }
+                //var reader = new StringReader(readfile);
+                //var csv = new CsvReader(reader, CultureInfo.InvariantCulture);
+                //var records = csv.GetRecords<dynamic>();
+                //foreach (var rec in records)
+                //{
+                //    Console.WriteLine($"{rec.EmpID,-5}{rec.EmpName,-10}{rec.Designation,-10}{rec.Salary,-5}{rec.bonus,-5}");
+                //}
                 Console.ReadLine();
             }
         }
