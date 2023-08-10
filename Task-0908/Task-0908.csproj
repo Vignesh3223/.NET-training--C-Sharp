@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{490F3DB4-A89F-40A6-85A3-E3C4E9C33A63}</ProjectGuid>
+    <ProjectGuid>{DF524DA7-2ED7-4571-BB3D-548884BE6034}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Task_0708</RootNamespace>
-    <AssemblyName>Task-0708</AssemblyName>
+    <RootNamespace>Task_0908</RootNamespace>
+    <AssemblyName>Task-0908</AssemblyName>
     <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Task_0708.MultiThreads</StartupObject>
+    <StartupObject>Task_0908.Reflection</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,11 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Debugging-2.cs" />
-    <Compile Include="Debugging.cs" />
-    <Compile Include="Events.cs" />
-    <Compile Include="MultiThreads.cs" />
+    <Compile Include="CustomAttribute.cs" />
+    <Compile Include="Indexer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reflection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
