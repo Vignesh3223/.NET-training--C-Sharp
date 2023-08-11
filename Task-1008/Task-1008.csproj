@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DF524DA7-2ED7-4571-BB3D-548884BE6034}</ProjectGuid>
+    <ProjectGuid>{4D795765-E689-4B4B-BF22-09F1FDEF2C36}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Task_0908</RootNamespace>
-    <AssemblyName>Task-0908</AssemblyName>
+    <RootNamespace>Task_1008</RootNamespace>
+    <AssemblyName>Task-1008</AssemblyName>
     <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Task_0908.CustomAttribute</StartupObject>
+    <StartupObject>Task_1008.AsyncAwait</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,10 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomAttribute.cs" />
-    <Compile Include="Indexer.cs" />
+    <Compile Include="AsyncAwait.cs" />
+    <Compile Include="CLArguments.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reflection.cs" />
+    <Compile Include="TupleParameters.cs" />
+    <Compile Include="Tuples.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
