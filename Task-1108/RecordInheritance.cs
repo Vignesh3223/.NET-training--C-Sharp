@@ -10,7 +10,7 @@ namespace Task_1108
     {
         public void Display()
         {
-            Console.WriteLine("Movies");
+            Console.WriteLine("Movies.......");
         }
     }
     public record ActionMovies : Movies
