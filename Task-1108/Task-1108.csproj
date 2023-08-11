@@ -34,7 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>System.Runtime.CompilerServices.RecordStruct</StartupObject>
+    <StartupObject>Task_1108.RecordInheritance</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecordInheritance.cs" />
     <Compile Include="RecordStruct.cs" />
   </ItemGroup>
   <ItemGroup>

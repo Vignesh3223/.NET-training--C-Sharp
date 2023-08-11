@@ -20,13 +20,10 @@ namespace Task_1008
             this.tname = tname; 
             this.tage = tage;
             this.tcompany = tcompany;
-
         }
-
     }
     internal class TupleParameters
     {
-      
         public static void CompanyCheck(Tuple<int,string,int,string> tr)
         {
             if (tr.Item4 == "CGVAK")
