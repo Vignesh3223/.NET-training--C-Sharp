@@ -6,28 +6,28 @@ using System.Threading.Tasks;
 
 namespace Task_1108
 {
-    public record Movies
+    public record class Movies
     {
         public void Display()
         {
             Console.WriteLine("Movies.......");
         }
     }
-    public record ActionMovies : Movies
+    public record class ActionMovies : Movies
     {
         public void Display1()
         {
             Console.WriteLine("Action Movies....");
         }
     }
-    public record ComedyMovies : Movies
+    public record class ComedyMovies : Movies
     {
         public void Display2()
         {
             Console.WriteLine("Comedy Movies....");
         }
     }
-    public record ThrillerMovies : Movies
+    public record class ThrillerMovies : Movies
     {
         public void Display3()
         {

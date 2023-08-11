@@ -28,24 +28,23 @@ namespace Task_1008
         {
             if (tr.Item4 == "CGVAK")
             {
-                Console.WriteLine("\nTrainee of CG-VAK");
+                Console.WriteLine($"Trainee {tr.Item2} with id {tr.Item1} is {tr.Item3} years old");
             }
             else if (tr.Item4 == "G2")
             {
-                Console.WriteLine("\nTrainee of G2");
+                Console.WriteLine($"Trainee {tr.Item2} with id {tr.Item1} is {tr.Item3} years old");
             }
             else
             {
                 Console.WriteLine("\nWrong data");
             }
-
-            Console.WriteLine($"\nTrainee {tr.Item1} with id {tr.Item2} is {tr.Item3} years old");
         }
     static void Main(string[] args)
         {
             int tid, tage;
             string tname, tcompany;
-            List<Trainee> Trainees = new List<Trainee>();
+            List<Trainee> CGTrainees = new List<Trainee>();
+            List<Trainee> G2Trainees = new List<Trainee>();
             Console.WriteLine("Enter number of trainees from both Organisations");
             int trainee = Convert.ToInt32(Console.ReadLine());
             for (int i = 0; i < trainee; i++)
@@ -61,16 +60,33 @@ namespace Task_1008
                 Console.WriteLine("Enter Trainee Company: ");
                 tcompany = Console.ReadLine();
                 Console.WriteLine("-------------");
-                Trainees.Add(new Trainee ( tid, tname, tage, tcompany ));
+                if (tcompany == "CGVAK")
+                {
+                    CGTrainees.Add(new Trainee(tid, tname, tage, tcompany));
+                }
+                else if (tcompany == "G2")
+                {
+                    G2Trainees.Add(new Trainee(tid, tname, tage, tcompany));
+                }     
             }
             Console.WriteLine("Trainee Details");
             Console.WriteLine("-------------");
-            foreach (var value in Trainees)
+            Console.WriteLine("\nTrainees of CG-VAK");
+            Console.WriteLine("-------------");
+            foreach (var value in CGTrainees)
             {
                 var tr = new Tuple<int, string, int, string>(value.tid, value.tname, value.tage, value.tcompany);
                 CompanyCheck(tr);
             }
-            Console.WriteLine("****************");
+            Console.WriteLine();
+            Console.WriteLine("\nTrainees of G2");
+            Console.WriteLine("-------------");
+            foreach (var value1 in G2Trainees)
+            {
+                var tr = new Tuple<int, string, int, string>(value1.tid, value1.tname, value1.tage, value1.tcompany);
+                CompanyCheck(tr);
+            }
+            Console.WriteLine("\n****************\n");
             Console.ReadLine();
         }
     }
