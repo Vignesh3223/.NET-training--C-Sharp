@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
@@ -7,12 +8,47 @@ using System.Threading.Tasks;
 
 namespace Task_1008
 {
+    public class Trainee
+    {
+        public int tid { get; set; }
+        public string tname { get; set; }
+        public int tage { get; set; }
+        public string tcompany { get; set; }
+
+        public Trainee(int tid, string tname, int tage, string tcompany) { 
+            this.tid = tid;
+            this.tname = tname; 
+            this.tage = tage;
+            this.tcompany = tcompany;
+
+        }
+
+    }
     internal class TupleParameters
     {
-        static void Main(string[] args)
+      
+        public static void CompanyCheck(Tuple<int,string,int,string> tr)
+        {
+            if (tr.Item4 == "CGVAK")
+            {
+                Console.WriteLine("\nTrainee of CG-VAK");
+            }
+            else if (tr.Item4 == "G2")
+            {
+                Console.WriteLine("\nTrainee of G2");
+            }
+            else
+            {
+                Console.WriteLine("\nWrong data");
+            }
+
+            Console.WriteLine($"\nTrainee {tr.Item1} with id {tr.Item2} is {tr.Item3} years old");
+        }
+    static void Main(string[] args)
         {
             int tid, tage;
             string tname, tcompany;
+            List<Trainee> Trainees = new List<Trainee>();
             Console.WriteLine("Enter number of trainees from both Organisations");
             int trainee = Convert.ToInt32(Console.ReadLine());
             for (int i = 0; i < trainee; i++)
@@ -27,26 +63,17 @@ namespace Task_1008
                 tage = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Enter Trainee Company: ");
                 tcompany = Console.ReadLine();
-                if (tcompany == "CGVAK")
-                {
-                    Console.WriteLine("\nTrainee of CG-VAK");
-                    Display((tid, tname, tage, tcompany));
-                }
-                else if (tcompany == "G2")
-                {
-                    Console.WriteLine("\nTrainee of G2");
-                    Display((tid, tname, tage, tcompany));
-                }
-                else
-                {
-                    Console.WriteLine("\nWrong data");
-                }
                 Console.WriteLine("-------------");
+                Trainees.Add(new Trainee ( tid, tname, tage, tcompany ));
             }
-            void Display((int tid, string tname, int tage, string tcompany) tr1)
+            Console.WriteLine("Trainee Details");
+            Console.WriteLine("-------------");
+            foreach (var value in Trainees)
             {
-              Console.WriteLine($"{tr1.tname} with id {tr1.tid} is {tr1.tage} years old is working in {tr1.tcompany}");
+                var tr = new Tuple<int, string, int, string>(value.tid, value.tname, value.tage, value.tcompany);
+                CompanyCheck(tr);
             }
+            Console.WriteLine("****************");
             Console.ReadLine();
         }
     }

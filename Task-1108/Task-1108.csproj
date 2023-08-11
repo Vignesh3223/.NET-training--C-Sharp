@@ -2,12 +2,13 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
+    <LangVersion>latest</LangVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4D795765-E689-4B4B-BF22-09F1FDEF2C36}</ProjectGuid>
+    <ProjectGuid>{0365CC17-DBF2-4211-B710-CA078B089A0E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Task_1008</RootNamespace>
-    <AssemblyName>Task-1008</AssemblyName>
+    <RootNamespace>Task_1108</RootNamespace>
+    <AssemblyName>Task_1108</AssemblyName>
     <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Task_1008.TupleParameters</StartupObject>
+    <StartupObject>System.Runtime.CompilerServices.RecordStruct</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,12 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AsyncAwait.cs" />
-    <Compile Include="CLArguments.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TupleParameters.cs" />
-    <Compile Include="Tuples.cs" />
+    <Compile Include="RecordStruct.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
