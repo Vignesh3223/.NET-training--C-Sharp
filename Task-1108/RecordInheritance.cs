@@ -52,6 +52,7 @@ namespace Task_1108
             Console.WriteLine("Child-2 Record");
             Console.WriteLine("-------------");
             ComedyMovies c = new ComedyMovies();
+            c.Display();
             c.Display2();
             Console.WriteLine("\n");
             Console.WriteLine("Child-3 Record");

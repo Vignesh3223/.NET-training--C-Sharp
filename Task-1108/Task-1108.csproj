@@ -34,7 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Task_1108.RecordInheritance</StartupObject>
+    <StartupObject>System.Runtime.CompilerServices.RecordStruct</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

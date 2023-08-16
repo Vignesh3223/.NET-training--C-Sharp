@@ -60,7 +60,7 @@ internal class RecordStruct
             int eno = int.Parse(Console.ReadLine());
             for (int i = 0; i < eno; i++)
             {
-                Console.WriteLine("Enter Emplot");
+                Console.WriteLine("Enter Employee Details");
                 Console.WriteLine("Enter Employee ID");
                 int id = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Enter Employee Name");
